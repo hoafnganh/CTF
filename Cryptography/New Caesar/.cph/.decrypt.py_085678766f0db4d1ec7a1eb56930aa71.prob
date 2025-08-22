@@ -1,0 +1,1 @@
+{"name":"Local: decrypt","url":"d:\\CTF\\picoCTF\\Cryptography\\New Caesar\\decrypt.py","tests":[{"id":1751946433076,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CTF\\picoCTF\\Cryptography\\New Caesar\\decrypt.py","group":"local","local":true}

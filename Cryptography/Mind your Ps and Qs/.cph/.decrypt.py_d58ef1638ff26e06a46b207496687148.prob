@@ -1,0 +1,1 @@
+{"name":"Local: decrypt","url":"d:\\CTF\\picoCTF\\Cryptography\\Mind your Ps and Qs\\decrypt.py","tests":[{"id":1751884206191,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CTF\\picoCTF\\Cryptography\\Mind your Ps and Qs\\decrypt.py","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: pass","url":"d:\\CTF\\picoCTF\\Cryptography\\rsa_oracle\\pass.py","tests":[{"id":1751788172568,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CTF\\picoCTF\\Cryptography\\rsa_oracle\\pass.py","group":"local","local":true}
