@@ -79,12 +79,6 @@ S_hi  +  S_lo  =  R
 ⇒ S_hi = R - S_lo
 ```
 
-Vậy khi duyệt nửa Low, ta chỉ cần kiểm tra trong bảng tra xem **có `S_hi` đúng bằng `R - S_lo` hay không**. Nếu **có**, tức là đã tìm được **thứ tự đúng** cho cả 12 vị trí.
-
-## Vì sao chạy được?
-Số trường hợp của mỗi nửa cỡ **665 nghìn** — tiêu tốn nhưng vẫn trong tầm xử lý nếu viết gọn và biết **tiền tính**:
-- **Tiền tính “độ nặng” cho từng vị trí** (`Q_j`) để cộng nhanh.
-- **Tiền tính đóng góp** của mỗi ID nếu đặt vào một vị trí cụ thể, giúp việc cộng tổng “điểm” khi duyệt hoán vị rất nhanh (chỉ cộng/nhân trên đường cong, không phải tính lại từ đầu).
 
 ## Kết quả sau khi khớp
 - Từ cặp `S_lo` và `S_hi` khớp `R`, ta suy ra **thứ tự 12 ID** theo `j = 0..11`.
@@ -120,7 +114,7 @@ Lưu ý:
 
 ---
 
-## Script (full, robust)
+## Script 
 
 <details>
   <summary>Code</summary>
