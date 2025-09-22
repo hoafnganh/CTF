@@ -1,9 +1,6 @@
-# YugiVault — Exodia (PTIT CTF 2025) — Write-up
+# Exodia’s Ritual-bounty (PTIT CTF 2025)
 
-> Host: `nc 103.197.184.48 41337`  
-> Tác giả: bạn (script tối ưu), soạn WU bởi trợ lý
-
----
+![image.png](image.png)
 
 ## Mục tiêu
 Ghép **Exodia** bằng cách gửi 5 mảnh hex (≤32B) sao cho **XOR của cả 5 mảnh = private key d** của phiên. Khi đúng, server in `FLAG`.
