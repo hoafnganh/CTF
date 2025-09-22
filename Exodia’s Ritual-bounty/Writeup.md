@@ -119,7 +119,7 @@ Lưu ý:
 <details>
   <summary>Code</summary>
 
-  ```
+  ```python
   # -*- coding: utf-8 -*-
 from collections import defaultdict
 import socket, json, hashlib, secrets, itertools, sys, re, time
