@@ -1,0 +1,4 @@
+Vào tháng 5 năm 2026, các quan chức Hoa Kỳ đã xác nhận việc triển khai máy bay không người lái quân sự để giám sát không phận Cuba sau khi phát hiện khoảng 300 hệ thống máy bay không người lái (UAS) tại quốc gia này. Axios đưa tin rằng những chiếc máy bay không người lái này được cung cấp cho Cuba bởi các nhà tài trợ nhà nước nước ngoài nhằm mở rộng mạng lưới tình báo của họ ở Bán cầu Tây. Phân tích về chuỗi cung ứng, thông số kỹ thuật và bối cảnh ngoại giao chỉ ra hai nhà tài trợ nhà nước chính đứng sau việc Cuba sở hữu số máy bay không người lái này. Hãy xác định cả hai quốc gia cung cấp máy bay không người lái cho Cuba (sắp xếp theo thứ tự bảng chữ cái tiếng Anh, phân tách bằng dấu gạch dưới).Định dạng ví dụ: flag{COUNTRY_COUNTRY}  Hai quốc gia cung cấp các hệ thống máy bay không người lái này cho Cuba theo báo cáo của Axios là Iran và Nga (Russia). Sắp xếp theo thứ tự bảng chữ cái tiếng Anh sẽ là Iran trước, Russia sau.  
+
+
+flag{IRAN_RUSSIA}
