@@ -1,0 +1,17 @@
+There is a git repository at ssh://bandit27-git@bandit.labs.overthewire.org/home/bandit27-git/repo via the port 2220. 
+The password for the user bandit27-git is the same as for the user bandit27.
+
+From your local machine (not the OverTheWire machine!), clone the repository and find the password for the next level. 
+This needs git installed locally on your machine.
+
+
+Ta sẽ clone repo trên về:
+
+(base) ┌──(hoafnganh㉿DESKTOP-H9VAT4L)-[~]
+└─$ git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo
+
+Trong repo có file README:
+
+┌──(hoafnganh㉿DESKTOP-H9VAT4L)-[~/repo]
+└─$ cat README
+The password to the next level is: Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN

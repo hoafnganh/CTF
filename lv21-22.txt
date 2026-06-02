@@ -1,0 +1,17 @@
+A program is running automatically at regular intervals from cron, 
+the time-based job scheduler. 
+Look in /etc/cron.d/ for the configuration and see what command is being executed.
+
+Ta sẽ check file /etc/cron.d/cronjob_bandit22:
+bandit21@bandit:/etc/cron.d$ cat cronjob_bandit22
+@reboot bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+
+Check tiếp script cronjob_bandit22.sh xem nó làm gì
+bandit21@bandit:/etc/cron.d$ cat /usr/bin/cronjob_bandit22.sh
+#!/bin/bash
+chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+Trong file thuộc folder tmp chứa pass
+bandit21@bandit:/etc/cron.d$ cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q

@@ -1,0 +1,12 @@
+The password for the next level is stored in the only human-readable file in the inhere directory. 
+Tip: if your terminal is messed up, try the “reset” command.
+
+Trong thư mục inhere, có nhiều file "-file0x", vì thế ta sẽ cat toàn bộ:
+bandit4@bandit:~/inhere$ cat ./-file0*
+d%�h�U��N?CN�qy�������B��g4V�i�,��%?�mҶ�Q��3�Z����A�)�/��^���,��G�V�����J�
+>���7��vl��Q�nk��,�0K��V��XH�c��W$�g�����l(�2�Y�Ev���v�qi�1�HE)
+�]�L��]vr�4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+KU����  g��
+8'�
+
+Khả năng cao pass là 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw

@@ -1,0 +1,24 @@
+
+There is a git repository at ssh://bandit30-git@bandit.labs.overthewire.org:2220/home/bandit30-git/repo via the port 2220. 
+The password for the user bandit30-git is the same as for the user bandit30.
+
+From your local machine (not the OverTheWire machine!), clone the repository and find the password for the next level. 
+This needs git installed locally on your machine.
+
+
+(base) ┌──(hoafnganh㉿DESKTOP-H9VAT4L)-[~/repo]
+└─$ git show --all
+commit bd393e0e59a075f92fd84edc0ad8d13f64572de2 (HEAD -> master, origin/master, origin/HEAD)
+Author: Ben Dover <noone@overthewire.org>
+Date:   Fri Apr 3 15:17:58 2026 +0000
+
+    initial commit of README.md
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..029ba42
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1 @@
++just an epmty file... muahaha
+fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy

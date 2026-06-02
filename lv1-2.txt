@@ -1,0 +1,7 @@
+The password for the next level is stored in a file called - located in the home directory
+
+Các file bắt đầu bằng dash "-" thường gây nhầm lẫn trong Linux vì hệ thống hiểu chúng là tham số lệnh.
+Để thao tác ta sẽ sử dụng đường dẫn "./" trước tên tệp
+
+bandit1@bandit:~$ cat ./-
+263JGJPfgU6LtdEvgfWU1XP5yac29mFx
