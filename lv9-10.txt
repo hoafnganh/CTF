@@ -1,0 +1,7 @@
+The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
+
+bandit9@bandit:~$ strings data.txt | grep "==="
+========== the
+2========== password
+========== is
+========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey

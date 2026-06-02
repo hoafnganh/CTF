@@ -1,0 +1,3 @@
+ssh bandit.labs.overthewire.org -p 2220 -l bandit0
+-p: port
+-l: login

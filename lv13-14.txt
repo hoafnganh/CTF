@@ -1,0 +1,81 @@
+The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. 
+For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. 
+Look at the commands that logged you into previous bandit levels, and find out how to use the key for this level.
+If you need help with this level: a hint file can be found in the home directory.
+Make sure to read the error messages as they are informative.
+
+
+Trong folder có file sshkey.private, ta thử dùng để kết nối tới bandit14
+bandit13@bandit:~$ ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+The authenticity of host '[bandit.labs.overthewire.org]:2220 ([127.0.0.1]:2220)' can't be established.
+ED25519 key fingerprint is SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Could not create directory '/home/bandit13/.ssh' (Permission denied).
+Failed to add the host to the list of known hosts (/home/bandit13/.ssh/known_hosts).
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+!!! You are trying to log into this SSH server with a password on port 2220 from localhost.
+!!! Connecting from localhost is blocked to conserve resources.
+!!! Please log out and log in again.
+
+backend: gibson-1
+Received disconnect from 127.0.0.1 port 2220:2: no authentication methods enabled
+Disconnected from 127.0.0.1 port 2220
+
+Ta nhận thấy rằng không thể kết nối từ bandit13 (không cho kết nối trong cục bộ), nên ta sẽ sao chép file sshkey ra máy chính
+┌──(hoafnganh㉿DESKTOP-H9VAT4L)-[~]
+└─$ scp -P 2220 bandit13@bandit.labs.overthewire.org:~/sshkey.private /home/hoafnganh/
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-1
+bandit13@bandit.labs.overthewire.org's password:
+sshkey.private                                                                        100% 1679     3.2KB/s   00:00
+
+
+Kết nối ssh từ máy chính
+(base) ┌──(hoafnganh㉿DESKTOP-H9VAT4L)-[~]
+└─$ ssh -i sshkey.private bandit.labs.overthewire.org -p 2220 -l bandit14
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-1
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0640 for 'sshkey.private' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "sshkey.private": bad permissions
+bandit14@bandit.labs.overthewire.org's password:
+
+Quyền của file key rộng hơn so với yêu cầu nên ta phải sửa quyền
+(base) ┌──(hoafnganh㉿DESKTOP-H9VAT4L)-[~]
+└─$ chmod 400 sshkey.private
+
+(base) ┌──(hoafnganh㉿DESKTOP-H9VAT4L)-[~]
+└─$ ssh -i sshkey.private bandit.labs.overthewire.org -p 2220 -l bandit14
+Kết nối thành công

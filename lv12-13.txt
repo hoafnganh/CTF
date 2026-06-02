@@ -1,0 +1,33 @@
+The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. 
+For this level it may be useful to create a directory under /tmp in which you can work. 
+Use mkdir with a hard to guess directory name. 
+Or better, use the command “mktemp -d”. Then copy the datafile using cp, and rename it using mv (read the manpages!)
+
+Copy file data.txt sang thư mục /tmp để làm việc
+trong file data.txt là hexdump của một file
+Ta sẽ sử dụng lệnh xxd để khôi phục:
+xxd -r data.txt > data_bin
+-r: convert hex dump --> binary
+Check file data_bin thì nó là gzip compressed
+Đổi tên file thành đuôi gz và tiến hành gunzip
+Lần này thì nó là bzip2
+bandit12@bandit:/tmp/ynwa$ file data_bin
+data_bin: bzip2 compressed data, block size = 900k
+Tiến hành giải nén dùng bzip2
+bandit12@bandit:/tmp/ynwa$ bzip2 -d data_bin
+bzip2: Can't guess original name for data_bin -- using data_bin.out
+-d: decompress
+Cứ lặp lại cho đến khi trả về POSIX tar archive:
+bandit12@bandit:/tmp/ynwa$ file data_bin.out
+data_bin.out: gzip compressed data, was "data4.bin", last modified: Fri Apr  3 15:17:20 2026, max compression, from Unix, original size modulo 2^32 20480
+bandit12@bandit:/tmp/ynwa$ mv data_bin.out data_bin.gz
+bandit12@bandit:/tmp/ynwa$ gunzip data_bin.gz
+bandit12@bandit:/tmp/ynwa$ ls
+data_bin  data.txt
+bandit12@bandit:/tmp/ynwa$ file data_bin
+data_bin: POSIX tar archive (GNU)
+Đối với tar archive ta dùng tar -xf để giải nén
+-x: extract
+-f: file
+bandit12@bandit:/tmp/ynwa$ cat data8
+The password is FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
