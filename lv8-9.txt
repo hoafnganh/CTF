@@ -1,8 +1,0 @@
-The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
-
-
-file data.txt sẽ có nhiều dòng trùng lặp --> dùng uniq
-Tuy nhiên uniq sẽ chỉ có thể so sánh các dòng nằm kế tiếp nhau --> sort
-
-bandit8@bandit:~$ sort data.txt | uniq -u
-4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
