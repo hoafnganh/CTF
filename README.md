@@ -1,4 +1,3 @@
-# CTF
-CTF challenges.
+# Overtherwire - Bandit
 
-Watch on the branches.
+Writeup for Bandit challs
